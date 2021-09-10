@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) {
+        // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto-Regular";
+}
+
+ul,
+li,
+p,
+label {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("/assets//fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("/assets//fonts//Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("/assets//fonts//Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Sansita-Regular";
+    src: url("/assets//fonts/Sansita-Regular.otf");
+}
+
+@font-face {
+    font-family: "Sansita-Bold";
+    src: url("/assets//fonts//Sansita-Bold.otf");
+}
